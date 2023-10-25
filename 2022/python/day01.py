@@ -18,8 +18,10 @@ for entry in data_array:
   else: # we have finished with an elf
     calorie_array.append(count)
     count = 0
+calorie_array.append(count) # still need to record last calorie count
 
 # sum the top n calorie counts and return the total
+# To-do: rewrite using heaps rather than max search
 def top_n(array: list[int], n: int) -> int:
   total = 0
   for i in range(n):
